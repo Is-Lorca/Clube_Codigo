@@ -22,10 +22,19 @@ def crivoEratostenes(limite):
     #retorna a array
     return primos
 
+def somaPrimos(arrayNumerosPrimos):
+    ultimoValor = arrayNumerosPrimos[len(arrayNumerosPrimos)-1]
+    soma = arrayNumerosPrimos[0] + ultimoValor
+
+    return soma
+
 def main():
     #função armazenando o limite, sendo 100
-    numerosPrimos = crivoEratostenes(100)
+    limite = int(input("Insira o número: "))
+    numerosPrimos = crivoEratostenes(limite)
+    soma = somaPrimos(numerosPrimos)
 
     print(numerosPrimos)
+    print("Soma do primeiro e último números primos do limite inserido: ", soma)
 
 main()
