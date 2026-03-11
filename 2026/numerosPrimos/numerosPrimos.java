@@ -11,7 +11,7 @@ public class numerosPrimos{
         System.out.println("Insira o número limite: ");
         int limite = scanner.nextInt();
 
-        arrayNumPrimos = numerosPrimos(limite);
+        arrayNumPrimos = crivoEratostenes(limite);
         soma = somaPrimos(arrayNumPrimos);
 
         System.out.printf("Os números primos de 2 a %d são: ", limite);
@@ -21,7 +21,7 @@ public class numerosPrimos{
         scanner.close();
     }
 
-    static ArrayList<Integer> numerosPrimos(int limite){
+    static ArrayList<Integer> crivoEratostenes(int limite){
         boolean[] numerosPrimos = new boolean[limite+1];
         Arrays.fill(numerosPrimos, true);
         ArrayList<Integer> primos = new ArrayList<>();
