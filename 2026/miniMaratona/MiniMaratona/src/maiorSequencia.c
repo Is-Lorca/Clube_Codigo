@@ -1,18 +1,22 @@
 #include <stdio.h>
 
 int main(){
-    int numero, maior = 0, contador = 0;
+    int usuario, maior = 0, contador = 0;
 
-    while(numero != -1){
+    while(usuario != -1){
         if(contador == 1){
-            maior = numero;
+            maior = usuario;
         }
-        else if(numero>maior){
-            maior = numero;
+        else if(usuario>maior){
+            maior = usuario;
         }
+        
         printf("Digite os numeros: ");
-        scanf("%d", &numero);
+        scanf("%d", &usuario);
         contador++;
+        if(usuario%2 == 0){
+            printf("Par");
+        }
     }
 
     printf("O maior número foi: %d", maior);
